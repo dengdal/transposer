@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'transposerGui.ui'
 #
-# Created: Tue Jan 20 13:43:39 2015
+# Created: Tue Jan 20 15:18:46 2015
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -38,6 +38,19 @@ class Ui_Transposer(object):
         self.textEdit = QtGui.QTextEdit(self.centralwidget)
         self.textEdit.setGeometry(QtCore.QRect(340, 180, 104, 78))
         self.textEdit.setObjectName(_fromUtf8("textEdit"))
+        self.fromKeylistWidget = QtGui.QListWidget(self.centralwidget)
+        self.fromKeylistWidget.setGeometry(QtCore.QRect(500, 310, 256, 192))
+        self.fromKeylistWidget.setObjectName(_fromUtf8("fromKeylistWidget"))
+        item = QtGui.QListWidgetItem()
+        self.fromKeylistWidget.addItem(item)
+        item = QtGui.QListWidgetItem()
+        self.fromKeylistWidget.addItem(item)
+        item = QtGui.QListWidgetItem()
+        self.fromKeylistWidget.addItem(item)
+        item = QtGui.QListWidgetItem()
+        self.fromKeylistWidget.addItem(item)
+        item = QtGui.QListWidgetItem()
+        self.fromKeylistWidget.addItem(item)
         Transposer.setCentralWidget(self.centralwidget)
         self.menubar = QtGui.QMenuBar(Transposer)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 25))
@@ -55,4 +68,17 @@ class Ui_Transposer(object):
         Transposer.setWindowTitle(_translate("Transposer", "Transposer", None))
         self.transpose.setText(_translate("Transposer", "Transpose", None))
         self.exit.setText(_translate("Transposer", "Exit", None))
+        __sortingEnabled = self.fromKeylistWidget.isSortingEnabled()
+        self.fromKeylistWidget.setSortingEnabled(False)
+        item = self.fromKeylistWidget.item(0)
+        item.setText(_translate("Transposer", "c", None))
+        item = self.fromKeylistWidget.item(1)
+        item.setText(_translate("Transposer", "c#", None))
+        item = self.fromKeylistWidget.item(2)
+        item.setText(_translate("Transposer", "d", None))
+        item = self.fromKeylistWidget.item(3)
+        item.setText(_translate("Transposer", "d#", None))
+        item = self.fromKeylistWidget.item(4)
+        item.setText(_translate("Transposer", "e", None))
+        self.fromKeylistWidget.setSortingEnabled(__sortingEnabled)
 
