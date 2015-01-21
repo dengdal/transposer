@@ -42,11 +42,15 @@ def calcNoOfSteps(fromKey,toKey):
 
 # transpose:
 def transpose(transposeHalfSteps, fromSongInput):
+
+    # init
+    fromSong = []
+    toSong = []
+    
     fromSongInput =  str(fromSongInput).split()
     # make lower case letters of song:
     for chord in fromSongInput:
             fromSong.append(chord.lower())
-
     for chord in fromSong:
         # pick first one or two letters for transpose the first:
         if len(chord) >= 2:

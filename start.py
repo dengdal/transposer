@@ -24,12 +24,16 @@ class StartQT4(QtGui.QMainWindow):
         global inpToKey
         inpToKey = str(curr.text())
     def transpose(self):
+        printSong = ''
         global inpFromKey
         global inpToKey
         steps = transposerLib.calcNoOfSteps(inpFromKey, inpToKey)
         fromSong = self.ui.textEdit.toPlainText()
         toSong = transposerLib.transpose(steps, fromSong)
-        self.ui.textEdit.setText(str(toSong))
+        for chord in toSong:
+            printSong += chord + ' '
+        self.ui.textEdit.clear()
+        self.ui.textEdit.setText(printSong)
 if __name__ == "__main__":
     app = QtGui.QApplication(sys.argv)
     myapp = StartQT4()
