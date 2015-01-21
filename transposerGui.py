@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'transposerGui.ui'
 #
-# Created: Wed Jan 21 12:30:51 2015
+# Created: Wed Jan 21 14:24:46 2015
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -27,6 +27,26 @@ class Ui_Transposer(object):
     def setupUi(self, Transposer):
         Transposer.setObjectName(_fromUtf8("Transposer"))
         Transposer.resize(800, 600)
+        palette = QtGui.QPalette()
+        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.Base, brush)
+        brush = QtGui.QBrush(QtGui.QColor(255, 49, 97))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.Window, brush)
+        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.Base, brush)
+        brush = QtGui.QBrush(QtGui.QColor(255, 49, 97))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.Window, brush)
+        brush = QtGui.QBrush(QtGui.QColor(255, 49, 97))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Base, brush)
+        brush = QtGui.QBrush(QtGui.QColor(255, 49, 97))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Window, brush)
+        Transposer.setPalette(palette)
         self.centralwidget = QtGui.QWidget(Transposer)
         self.centralwidget.setObjectName(_fromUtf8("centralwidget"))
         self.transpose = QtGui.QPushButton(self.centralwidget)
@@ -93,13 +113,13 @@ class Ui_Transposer(object):
         item = QtGui.QListWidgetItem()
         self.toKeylistWidget.addItem(item)
         self.label = QtGui.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(200, 160, 66, 17))
+        self.label.setGeometry(QtCore.QRect(200, 160, 66, 20))
         self.label.setObjectName(_fromUtf8("label"))
         self.label_2 = QtGui.QLabel(self.centralwidget)
-        self.label_2.setGeometry(QtCore.QRect(95, 156, 91, 21))
+        self.label_2.setGeometry(QtCore.QRect(90, 160, 91, 21))
         self.label_2.setObjectName(_fromUtf8("label_2"))
         self.label_3 = QtGui.QLabel(self.centralwidget)
-        self.label_3.setGeometry(QtCore.QRect(580, 150, 91, 21))
+        self.label_3.setGeometry(QtCore.QRect(580, 160, 91, 21))
         self.label_3.setObjectName(_fromUtf8("label_3"))
         Transposer.setCentralWidget(self.centralwidget)
         self.menubar = QtGui.QMenuBar(Transposer)
