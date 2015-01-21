@@ -11,9 +11,14 @@ class StartQT4(QtGui.QMainWindow):
         self.ui.setupUi(self)
         # here we connect signals with our slots
         self.ui.transpose.clicked.connect(self.transpose)
-        QtCore.QObject.connect(self.ui.transpose,QtCore.SIGNAL("clicked()"), self.transpose)
+        self.ui.fromKeylistWidget.currentItemChanged.connect(self.setFromKey)
+        self.ui.toKeylistWidget.clicked.connect(self.setToKey)
     def transpose(self):
         self.ui.textEdit.setText('transposed chords')
+    def setFromKey(self, curr, prev):
+        self.ui.textEdit.setText('fromKey set:' + curr.text())
+    def setToKey(self):
+        self.ui.textEdit.setText('toKey set')
 
 if __name__ == "__main__":
     app = QtGui.QApplication(sys.argv)
